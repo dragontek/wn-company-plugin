@@ -7,15 +7,19 @@ class BuilderTableUpdateDragontekCompanyServices extends Migration
 {
     public function up()
     {
-        Schema::table('dragontek_company_services', function ($table) {
-            $table->string('link', 255)->nullable();
-        });
+        if (!Schema::hasColumn('dragontek_company_services','link')) {
+            Schema::table('dragontek_company_services', function ($table) {
+                $table->string('link', 255)->nullable();
+            });
+        }        
     }
 
     public function down()
     {
-        Schema::table('dragontek_company_services', function ($table) {
-            $table->dropColumn('link');
-        });
+        if (Schema::hasColumn('hambern_company_services','link')) {
+            Schema::table('hambern_company_services', function ($table) {
+                $table->dropColumn('link');
+            });
+        }        
     }
 }
