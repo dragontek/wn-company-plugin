@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Dragontek\Company\Models;
 
 /**
  * Employee Model
@@ -15,7 +15,7 @@ class Employee extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_employees';
+    public $table = 'dragontek_company_employees';
     /**
      * @var array Relations
      */
@@ -24,8 +24,8 @@ class Employee extends Model
     public $belongsTo = [];
     public $belongsToMany = [
         'roles' => [
-            'Hambern\Company\Models\Role',
-            'table' => 'hambern_company_pivots',
+            'Dragontek\Company\Models\Role',
+            'table' => 'dragontek_company_pivots',
         ],
     ];
     public $morphTo = [];

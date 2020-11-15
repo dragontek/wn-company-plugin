@@ -1,16 +1,16 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Dragontek\Company\Components;
 
-use Hambern\Company\Models\Testimonial;
+use Dragontek\Company\Models\Testimonial;
 
 class Testimonials extends Component
 {
-    public $table = 'hambern_company_testimonials';
+    public $table = 'dragontek_company_testimonials';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.testimonials.name',
-            'description' => 'hambern.company::lang.components.testimonials.description',
+            'name' => 'dragontek.company::lang.components.testimonials.name',
+            'description' => 'dragontek.company::lang.components.testimonials.description',
         ];
     }
 
@@ -50,8 +50,8 @@ class Testimonials extends Component
         $properties = parent::defineProperties();
 
         $properties['modelIdentifier'] = [
-            'title' => 'hambern.company::lang.misc.model_identifier',
-            'description' => 'hambern.company::lang.descriptions.model_identifier',
+            'title' => 'dragontek.company::lang.misc.model_identifier',
+            'description' => 'dragontek.company::lang.descriptions.model_identifier',
             'type' => 'dropdown',
             'options' => ['id' => 'id'],
             'default' => 'id',

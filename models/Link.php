@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Dragontek\Company\Models;
 
 /**
  * Link Model
@@ -15,7 +15,7 @@ class Link extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_links';
+    public $table = 'dragontek_company_links';
     /**
      * @var array Relations
      */

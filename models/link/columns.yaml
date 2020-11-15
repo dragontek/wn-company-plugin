@@ -4,13 +4,13 @@
 
 columns:
     id:
-        label: hambern.company::lang.labels.id
+        label: dragontek.company::lang.labels.id
     name:
-        label: hambern.company::lang.labels.name
+        label: dragontek.company::lang.labels.name
         searchable: true
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: dragontek.company::lang.labels.published_at
         type: date
     updated_at:
-        label: hambern.company::lang.labels.updated_at
+        label: dragontek.company::lang.labels.updated_at
         type: date

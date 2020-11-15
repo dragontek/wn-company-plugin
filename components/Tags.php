@@ -1,16 +1,16 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Dragontek\Company\Components;
 
-use Hambern\Company\Models\Tag;
+use Dragontek\Company\Models\Tag;
 
 class Tags extends Component
 {
-    public $table = 'hambern_company_tags';
+    public $table = 'dragontek_company_tags';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.tags.name',
-            'description' => 'hambern.company::lang.components.tags.description'
+            'name' => 'dragontek.company::lang.components.tags.name',
+            'description' => 'dragontek.company::lang.components.tags.description'
         ];
     }
 

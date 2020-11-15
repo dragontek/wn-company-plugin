@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.project.label
+name: dragontek.company::lang.project.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/project/fields.yaml
+form: $/dragontek/company/models/project/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Project
+modelClass: Dragontek\Company\Models\Project
 
 # Default redirect location
-defaultRedirect: hambern/company/projects
+defaultRedirect: dragontek/company/projects
 
 # Create page
 create:
-    title: hambern.company::lang.project.create_title
-    redirect: hambern/company/projects/update/:id
-    redirectClose: hambern/company/projects
+    title: dragontek.company::lang.project.create_title
+    redirect: dragontek/company/projects/update/:id
+    redirectClose: dragontek/company/projects
 
 # Update page
 update:
-    title: hambern.company::lang.project.update_title
-    redirect: hambern/company/projects
-    redirectClose: hambern/company/projects
+    title: dragontek.company::lang.project.update_title
+    redirect: dragontek/company/projects
+    redirectClose: dragontek/company/projects
 
 # Preview page
 preview:
-    title: hambern.company::lang.project.preview_title
+    title: dragontek.company::lang.project.preview_title

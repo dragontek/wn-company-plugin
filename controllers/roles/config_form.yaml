@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.role.label
+name: dragontek.company::lang.role.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/role/fields.yaml
+form: $/dragontek/company/models/role/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Role
+modelClass: Dragontek\Company\Models\Role
 
 # Default redirect location
-defaultRedirect: hambern/company/roles
+defaultRedirect: dragontek/company/roles
 
 # Create page
 create:
-    title: hambern.company::lang.role.create_title
-    redirect: hambern/company/roles/update/:id
-    redirectClose: hambern/company/roles
+    title: dragontek.company::lang.role.create_title
+    redirect: dragontek/company/roles/update/:id
+    redirectClose: dragontek/company/roles
 
 # Update page
 update:
-    title: hambern.company::lang.role.update_title
-    redirect: hambern/company/roles
-    redirectClose: hambern/company/roles
+    title: dragontek.company::lang.role.update_title
+    redirect: dragontek/company/roles
+    redirectClose: dragontek/company/roles
 
 # Preview page
 preview:
-    title: hambern.company::lang.role.preview_title
+    title: dragontek.company::lang.role.preview_title

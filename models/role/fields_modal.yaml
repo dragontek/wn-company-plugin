@@ -4,10 +4,10 @@
 
 fields:
     name:
-        label: hambern.company::lang.labels.name
+        label: dragontek.company::lang.labels.name
         span: auto
     published_at:
-        label: hambern.company::lang.labels.published_at
+        label: dragontek.company::lang.labels.published_at
         default: now
         type: datepicker
         mode: date
@@ -17,6 +17,6 @@ tabs:
     description:
         type: richeditor
         size: giant
-        label: hambern.company::lang.labels.description
+        label: dragontek.company::lang.labels.description
         span: full
-        tab: hambern.company::lang.labels.description
+        tab: dragontek.company::lang.labels.description

@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.testimonial.label
+name: dragontek.company::lang.testimonial.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/testimonial/fields.yaml
+form: $/dragontek/company/models/testimonial/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Testimonial
+modelClass: Dragontek\Company\Models\Testimonial
 
 # Default redirect location
-defaultRedirect: hambern/company/testimonials
+defaultRedirect: dragontek/company/testimonials
 
 # Create page
 create:
-    title: hambern.company::lang.testimonial.create_title
-    redirect: hambern/company/testimonials/update/:id
-    redirectClose: hambern/company/testimonials
+    title: dragontek.company::lang.testimonial.create_title
+    redirect: dragontek/company/testimonials/update/:id
+    redirectClose: dragontek/company/testimonials
 
 # Update page
 update:
-    title: hambern.company::lang.testimonial.update_title
-    redirect: hambern/company/testimonials
-    redirectClose: hambern/company/testimonials
+    title: dragontek.company::lang.testimonial.update_title
+    redirect: dragontek/company/testimonials
+    redirectClose: dragontek/company/testimonials
 
 # Preview page
 preview:
-    title: hambern.company::lang.testimonial.preview_title
+    title: dragontek.company::lang.testimonial.preview_title

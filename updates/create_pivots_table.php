@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Updates;
+<?php namespace Dragontek\Company\Updates;
 
 use October\Rain\Database\Updates\Migration;
 use Schema;
@@ -17,7 +17,7 @@ class CreatePivotsTable extends Migration
 
     public function up()
     {
-        Schema::create('hambern_company_pivots', function ($table) {
+        Schema::create('dragontek_company_pivots', function ($table) {
             $table->engine = 'InnoDB';
             foreach ($this->models as $model) {
                 $table->integer($model . '_id')->unsigned()->nullable()->index();
@@ -27,7 +27,7 @@ class CreatePivotsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('hambern_company_pivots');
+        Schema::dropIfExists('dragontek_company_pivots');
     }
 
 }

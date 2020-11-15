@@ -1,8 +1,8 @@
-<?php namespace Hambern\Company\Controllers;
+<?php namespace Dragontek\Company\Controllers;
 
 use BackendMenu;
 use Flash;
-use Hambern\Company\Models\Role;
+use Dragontek\Company\Models\Role;
 use Lang;
 
 /**
@@ -11,13 +11,13 @@ use Lang;
 class Roles extends Controller
 {
 
-    public $requiredPermissions = ['hambern.company.access_employees'];
+    public $requiredPermissions = ['dragontek.company.access_employees'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Hambern.Company', 'company', 'roles');
+        BackendMenu::setContext('Dragontek.Company', 'company', 'roles');
     }
 
     /**
@@ -35,9 +35,9 @@ class Roles extends Controller
                 $role->delete();
             }
 
-            Flash::success(Lang::get('hambern.company::lang.roles.delete_selected_success'));
+            Flash::success(Lang::get('dragontek.company::lang.roles.delete_selected_success'));
         } else {
-            Flash::error(Lang::get('hambern.company::lang.roles.delete_selected_empty'));
+            Flash::error(Lang::get('dragontek.company::lang.roles.delete_selected_empty'));
         }
 
         return $this->listRefresh();

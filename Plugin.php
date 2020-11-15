@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company;
+<?php namespace Dragontek\Company;
 
 use Backend;
 use Backend\Facades\BackendAuth;
@@ -18,9 +18,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'hambern.company::lang.plugin.name',
-            'description' => 'hambern.company::lang.plugin.description',
-            'author' => 'Hambern',
+            'name' => 'dragontek.company::lang.plugin.name',
+            'description' => 'dragontek.company::lang.plugin.description',
+            'author' => 'Dragontek Software',
             'icon' => 'icon-building',
         ];
     }
@@ -29,59 +29,59 @@ class Plugin extends PluginBase
     {
         return [
             'company' => [
-                'label' => 'hambern.company::lang.plugin.name',
-                'url' => Backend::url('hambern/company/' . $this->startPage()),
+                'label' => 'dragontek.company::lang.plugin.name',
+                'url' => Backend::url('dragontek/company/' . $this->startPage()),
                 'icon' => 'icon-building',
-                'permissions' => ['hambern.company.*'],
+                'permissions' => ['dragontek.company.*'],
                 'order' => 500,
                 'sideMenu' => [
                     'employees' => [
-                        'label' => 'hambern.company::lang.employees.menu_label',
+                        'label' => 'dragontek.company::lang.employees.menu_label',
                         'icon' => 'icon-user',
-                        'url' => Backend::url('hambern/company/employees'),
-                        'permissions' => ['hambern.company.access_employees'],
+                        'url' => Backend::url('dragontek/company/employees'),
+                        'permissions' => ['dragontek.company.access_employees'],
                     ],
                     'roles' => [
-                        'label' => 'hambern.company::lang.roles.menu_label',
+                        'label' => 'dragontek.company::lang.roles.menu_label',
                         'icon' => 'icon-briefcase',
-                        'url' => Backend::url('hambern/company/roles'),
-                        'permissions' => ['hambern.company.access_employees'],
+                        'url' => Backend::url('dragontek/company/roles'),
+                        'permissions' => ['dragontek.company.access_employees'],
                     ],
                     'projects' => [
-                        'label' => 'hambern.company::lang.projects.menu_label',
+                        'label' => 'dragontek.company::lang.projects.menu_label',
                         'icon' => 'icon-wrench',
-                        'url' => Backend::url('hambern/company/projects'),
-                        'permissions' => ['hambern.company.access_projects'],
+                        'url' => Backend::url('dragontek/company/projects'),
+                        'permissions' => ['dragontek.company.access_projects'],
                     ],
                     'services' => [
-                        'label' => 'hambern.company::lang.services.menu_label',
+                        'label' => 'dragontek.company::lang.services.menu_label',
                         'icon' => 'icon-certificate',
-                        'url' => Backend::url('hambern/company/services'),
-                        'permissions' => ['hambern.company.access_services'],
+                        'url' => Backend::url('dragontek/company/services'),
+                        'permissions' => ['dragontek.company.access_services'],
                     ],
                     'galleries' => [
-                        'label' => 'hambern.company::lang.galleries.menu_label',
+                        'label' => 'dragontek.company::lang.galleries.menu_label',
                         'icon' => 'icon-photo',
-                        'url' => Backend::url('hambern/company/galleries'),
-                        'permissions' => ['hambern.company.access_galleries'],
+                        'url' => Backend::url('dragontek/company/galleries'),
+                        'permissions' => ['dragontek.company.access_galleries'],
                     ],
                     'testimonials' => [
-                        'label' => 'hambern.company::lang.testimonials.menu_label',
+                        'label' => 'dragontek.company::lang.testimonials.menu_label',
                         'icon' => 'icon-comment',
-                        'url' => Backend::url('hambern/company/testimonials'),
-                        'permissions' => ['hambern.company.access_testimonials'],
+                        'url' => Backend::url('dragontek/company/testimonials'),
+                        'permissions' => ['dragontek.company.access_testimonials'],
                     ],
                     'links' => [
-                        'label' => 'hambern.company::lang.links.menu_label',
+                        'label' => 'dragontek.company::lang.links.menu_label',
                         'icon' => 'icon-link',
-                        'url' => Backend::url('hambern/company/links'),
-                        'permissions' => ['hambern.company.access_links'],
+                        'url' => Backend::url('dragontek/company/links'),
+                        'permissions' => ['dragontek.company.access_links'],
                     ],
                     'tags' => [
-                        'label' => 'hambern.company::lang.tags.menu_label',
+                        'label' => 'dragontek.company::lang.tags.menu_label',
                         'icon' => 'icon-tag',
-                        'url' => Backend::url('hambern/company/tags'),
-                        'permissions' => ['hambern.company.access_tags'],
+                        'url' => Backend::url('dragontek/company/tags'),
+                        'permissions' => ['dragontek.company.access_tags'],
                     ],
                 ],
             ],
@@ -92,7 +92,7 @@ class Plugin extends PluginBase
     {
         $user = BackendAuth::getUser();
         $permissions = array_reverse(array_keys($this->registerPermissions()));
-        if (!isset($user->permissions['superuser']) && $user->hasAccess('hambern.company.*')) {
+        if (!isset($user->permissions['superuser']) && $user->hasAccess('dragontek.company.*')) {
             foreach ($permissions as $access) {
                 if ($user->hasAccess($access)) {
                     $page = explode('_', $access)[1];
@@ -105,37 +105,37 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'hambern.company.access_employees' => [
-                'label' => 'hambern.company::lang.employee.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_employees' => [
+                'label' => 'dragontek.company::lang.employee.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
-            'hambern.company.access_projects' => [
-                'label' => 'hambern.company::lang.project.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_projects' => [
+                'label' => 'dragontek.company::lang.project.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
-            'hambern.company.access_services' => [
-                'label' => 'hambern.company::lang.service.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_services' => [
+                'label' => 'dragontek.company::lang.service.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
-            'hambern.company.access_galleries' => [
-                'label' => 'hambern.company::lang.gallery.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_galleries' => [
+                'label' => 'dragontek.company::lang.gallery.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
-            'hambern.company.access_links' => [
-                'label' => 'hambern.company::lang.link.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_links' => [
+                'label' => 'dragontek.company::lang.link.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
-            'hambern.company.access_testimonials' => [
-                'label' => 'hambern.company::lang.testimonial.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_testimonials' => [
+                'label' => 'dragontek.company::lang.testimonial.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
-            'hambern.company.access_tags' => [
-                'label' => 'hambern.company::lang.tag.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_tags' => [
+                'label' => 'dragontek.company::lang.tag.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
-            'hambern.company.access_company' => [
-                'label' => 'hambern.company::lang.company.list_title',
-                'tab' => 'hambern.company::lang.plugin.name',
+            'dragontek.company.access_company' => [
+                'label' => 'dragontek.company::lang.company.list_title',
+                'tab' => 'dragontek.company::lang.plugin.name',
             ],
         ];
     }
@@ -143,15 +143,15 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Hambern\Company\Components\Employees' => 'Employees',
-            'Hambern\Company\Components\Roles' => 'Roles',
-            'Hambern\Company\Components\Projects' => 'Projects',
-            'Hambern\Company\Components\Services' => 'Services',
-            'Hambern\Company\Components\Galleries' => 'Galleries',
-            'Hambern\Company\Components\Company' => 'Company',
-            'Hambern\Company\Components\Testimonials' => 'Testimonials',
-            'Hambern\Company\Components\Links' => 'Links',
-            'Hambern\Company\Components\Tags' => 'Tags',
+            'Dragontek\Company\Components\Employees' => 'Employees',
+            'Dragontek\Company\Components\Roles' => 'Roles',
+            'Dragontek\Company\Components\Projects' => 'Projects',
+            'Dragontek\Company\Components\Services' => 'Services',
+            'Dragontek\Company\Components\Galleries' => 'Galleries',
+            'Dragontek\Company\Components\Company' => 'Company',
+            'Dragontek\Company\Components\Testimonials' => 'Testimonials',
+            'Dragontek\Company\Components\Links' => 'Links',
+            'Dragontek\Company\Components\Tags' => 'Tags',
         ];
     }
 
@@ -159,14 +159,14 @@ class Plugin extends PluginBase
     {
         return [
             'company' => [
-                'label' => 'hambern.company::lang.plugin.name',
-                'description' => 'hambern.company::lang.settings.description',
+                'label' => 'dragontek.company::lang.plugin.name',
+                'description' => 'dragontek.company::lang.settings.description',
                 'category' => 'system::lang.system.categories.system',
                 'icon' => 'icon-building-o',
-                'class' => 'Hambern\Company\Models\Company',
+                'class' => 'Dragontek\Company\Models\Company',
                 'order' => 500,
-                'keywords' => 'hambern.company::lang.settings.label',
-                'permissions' => ['hambern.company.access_company'],
+                'keywords' => 'dragontek.company::lang.settings.label',
+                'permissions' => ['dragontek.company.access_company'],
             ],
         ];
     }

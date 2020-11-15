@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Dragontek\Company\Models;
 
 use October\Rain\Database\Model as BaseModel;
 use BackendMenu;
@@ -15,7 +15,7 @@ class Company extends BaseModel
 
     public $translatable = ['story', 'slogan'];
 
-    public $settingsCode = 'hambern_company_settings';
+    public $settingsCode = 'dragontek_company_settings';
 
     public $settingsFields = 'fields.yaml';
 

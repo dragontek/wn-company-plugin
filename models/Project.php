@@ -1,4 +1,4 @@
-<?php namespace Hambern\Company\Models;
+<?php namespace Dragontek\Company\Models;
 
 /**
  * Project Model
@@ -15,7 +15,7 @@ class Project extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'hambern_company_projects';
+    public $table = 'dragontek_company_projects';
     /**
      * @var array Relations
      */
@@ -24,12 +24,12 @@ class Project extends Model
     public $belongsTo = [];
     public $belongsToMany = [
         'services' => [
-            'Hambern\Company\Models\Service',
-            'table' => 'hambern_company_pivots',
+            'Dragontek\Company\Models\Service',
+            'table' => 'dragontek_company_pivots',
         ],
         'tags' => [
-            'Hambern\Company\Models\Tag',
-            'table' => 'hambern_company_pivots',
+            'Dragontek\Company\Models\Tag',
+            'table' => 'dragontek_company_pivots',
         ],
     ];
     public $morphTo = [];

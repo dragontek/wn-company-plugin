@@ -3,29 +3,29 @@
 # ===================================
 
 # Record name
-name: hambern.company::lang.gallery.label
+name: dragontek.company::lang.gallery.label
 
 # Model Form Field configuration
-form: $/hambern/company/models/gallery/fields.yaml
+form: $/dragontek/company/models/gallery/fields.yaml
 
 # Model Class name
-modelClass: Hambern\Company\Models\Gallery
+modelClass: Dragontek\Company\Models\Gallery
 
 # Default redirect location
-defaultRedirect: hambern/company/galleries
+defaultRedirect: dragontek/company/galleries
 
 # Create page
 create:
-    title: hambern.company::lang.gallery.create_title
-    redirect: hambern/company/galleries/update/:id
-    redirectClose: hambern/company/galleries
+    title: dragontek.company::lang.gallery.create_title
+    redirect: dragontek/company/galleries/update/:id
+    redirectClose: dragontek/company/galleries
 
 # Update page
 update:
-    title: hambern.company::lang.gallery.update_title
-    redirect: hambern/company/galleries
-    redirectClose: hambern/company/galleries
+    title: dragontek.company::lang.gallery.update_title
+    redirect: dragontek/company/galleries
+    redirectClose: dragontek/company/galleries
 
 # Preview page
 preview:
-    title: hambern.company::lang.gallery.preview_title
+    title: dragontek.company::lang.gallery.preview_title

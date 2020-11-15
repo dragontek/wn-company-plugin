@@ -1,17 +1,17 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Dragontek\Company\Components;
 
-use Hambern\Company\Models\Link;
+use Dragontek\Company\Models\Link;
 
 class Links extends Component
 {
 
-    public $table = 'hambern_company_links';
+    public $table = 'dragontek_company_links';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.links.name',
-            'description' => 'hambern.company::lang.components.links.description'
+            'name' => 'dragontek.company::lang.components.links.name',
+            'description' => 'dragontek.company::lang.components.links.description'
         ];
     }
 

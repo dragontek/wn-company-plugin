@@ -1,16 +1,16 @@
-<?php namespace Hambern\Company\Components;
+<?php namespace Dragontek\Company\Components;
 
-use Hambern\Company\Models\Role;
+use Dragontek\Company\Models\Role;
 
 class Roles extends Component
 {
-    public $table = 'hambern_company_roles';
+    public $table = 'dragontek_company_roles';
 
     public function componentDetails()
     {
         return [
-            'name' => 'hambern.company::lang.components.roles.name',
-            'description' => 'hambern.company::lang.components.roles.description',
+            'name' => 'dragontek.company::lang.components.roles.name',
+            'description' => 'dragontek.company::lang.components.roles.description',
         ];
     }
 

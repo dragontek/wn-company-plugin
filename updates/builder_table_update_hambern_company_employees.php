@@ -1,14 +1,14 @@
-<?php namespace Hambern\Company\Updates;
+<?php namespace Dragontek\Company\Updates;
 
-use Hambern\Company\Models\Employee;
+use Dragontek\Company\Models\Employee;
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableUpdateHambernCompanyEmployees extends Migration
+class BuilderTableUpdateDragontekCompanyEmployees extends Migration
 {
     public function up()
     {
-        Schema::table('hambern_company_employees', function ($table) {
+        Schema::table('dragontek_company_employees', function ($table) {
             $table->string('slug')->index();
         });
 
@@ -21,7 +21,7 @@ class BuilderTableUpdateHambernCompanyEmployees extends Migration
 
     public function down()
     {
-        Schema::table('hambern_company_employees', function ($table) {
+        Schema::table('dragontek_company_employees', function ($table) {
             $table->dropColumn('slug');
         });
     }
