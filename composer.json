@@ -1,0 +1,7 @@
+{
+    "name": "dragontek/wn-company-plugin",
+    "description": "Winter CMS Plugin to manage Comany data",
+    "require": {
+        "php": ">=8.0"
+    }
+}
