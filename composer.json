@@ -1,6 +1,16 @@
 {
     "name": "dragontek/wn-company-plugin",
-    "description": "Winter CMS Plugin to manage Comany data",
+    "type": "winter-plugin",
+    "description": "Winter CMS Plugin to manage Company data",
+    "homepage": "https://github.com/wintercms/wn-sso-plugin",
+    "keywords": ["winter", "wintercms", "laravel", "company"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joshua Mondragon",
+            "email": "wintercms@dragontek.com"
+        }
+    ],
     "require": {
         "php": ">=8.0"
     }
